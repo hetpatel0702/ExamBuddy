@@ -1,3 +1,6 @@
+<html>
+
+<head>
 
 <?php
 
@@ -7,40 +10,32 @@
 //     die();
 // }
 
-
+$msg="";
 if (isset($_REQUEST['email'])) {
 
     include '../config.php';
     
+    
     $email = $_REQUEST['email'];
-    echo $email;
+    
     $result = mysqli_query($conn, "DELETE FROM teacher WHERE t_email='{$email}'");
     
     if ($result) {
-        // echo json_encode("Teacher deleted");  
-    //    echo "<p>done</p>";      
+        $msg =  "$email Successfully Deleted";     
     } 
     else 
     {
-        // echo json_encode("missing");
-        // // echo $result;
+        $msg =  "*Error: $result";
     }
-       
+}
+else{
+    $msg =  "*Error";
 }
 
 
+header("location:admin.php");
 ?>
 
+</head>
 
-<!-- <body>
-    <h2>Delete Teacher</h2>
-    <form method="POST" action="">
-       
-        Email:<input type="text" name="email">
-        
-        <input type="submit" name="submit">
-    </form>
-
-</body>
-
-</html> -->
+</html>

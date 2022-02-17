@@ -10,10 +10,11 @@
 //     die();
 // }
 
-include '../config.php';
-$msg = "";
+
 
 if (isset($_POST['submit'])) {
+    include '../config.php';
+
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, md5($_POST['password']));
@@ -40,13 +41,7 @@ if (isset($_POST['submit'])) {
     }
 }
 
-
+header("location:admin.php");
 ?>
-
-
-<body>
-    
-
-</body>
 
 </html>

@@ -2,129 +2,71 @@
 
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <title>Admin Panel</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<style>
+    div.deleteForm {
+        position: fixed;
+        right: 40px;
+        top: 470px;
+        width: 300px;
+        padding: 0 10px 20px 10px;
+        border: 3px solid #73AD21;
+        background-color: lightblue;
+        font-family: "Trirong", serif;
+    }
+    h2.dTest{
+        text-decoration-line: underline;
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    }
+    .btn{
+        text-align: center;
+    }
 
+    div.addForm {
+        position: fixed;
+        right: 40px;
+        width: 350px;
+        padding: 0 10px 20px 10px;
+        border: 3px solid #73AD21;
+        background-color: lightblue;
+        font-family: "Trirong", serif;
+    }
+
+    #errd{
+        position: fixed;
+        right: 40px;
+        top: 440px;
+        color: red;
+    }
+</style>
 </head>
-
-<!-- <style>
-
-div.addTeacherPhp{
-
-  visibility: hidden;
-
-}
-
-</style> -->
 
 <body>
 
-    <!-- <button onclick="showAddTeacher()"> ADD Teacher </button>
-    <button > Delete Teacher </button> -->
+    <div class="deleteForm">
+        <h2 class="dTest">Delete Teacher</h2>
+        <form method="POST" action="deleteteacher.php">
+            Email : <input type="text" id="email" name="email"><br><br>
+            <div class="btn"> <button type="submit" name="submit">Delete Teacher</button> </div>
+        </form>
+    </div>
 
-
-    <!-- <div class="addTeacherPhp" >
-
-       
-
-    </div> -->
-    <!-- <div class="deleteTeacherPhp" > -->
-    <h2>Delete Teacher</h2>
-    <!-- <form method="POST"> -->
-        Email:<input type="text" id="email" name="email">
-        <!-- <input type="submit" name="submit"> -->
-        <button  id="submit" name="submit">Delete</button>
-<!-- </form> -->
-        
-
-    <!-- </div> -->
-
-
-
-    <script>
-
-        $(document).ready(function(){
-            $("#submit").click(function(e){
-                e.preventDefault();
-               
-                $.ajax({
-                    type:"POST",
-                    url:"deleteteacher.php",
-                    data:{
-                        email: $("#email").val()
-                    },
-                    
-                    success: function(result){
-                        document.write(result);
-                    }
-                    error: function(result){
-                        alert("error");
-                    }
-                });
-                
-            });
-        });
-        // function sendAjaxRequest() {
-        //     var patientAdd = getCookie('address');
-        //     var driverAdd = getCookie('destaddress');
-        //     var res = '';
-        //     $.ajax({
-        //         url: 'DriverAssignedToPatient.php',
-        //         type: 'POST',
-        //         async: false,
-                
-        //         data: {
-        //             patientAdd:patientAdd,
-        //             driverAdd:driverAdd
-        //         },
-        //         success: function (response) {
-        //             // document.write(response);
-        //         },
-        //         error: function (jqXHR, textStatus, errorThrown) {
-        //             alert(textStatus, errorThrown);
-        //             // alert('error');
-        //         }
-        //     });
-            
-        // };
-
-        // function showAddTeacher(){
-
-        //     element = document.querySelector('.addTeacherPhp');
-
-        //     if(element.style.visibility == 'visible'){
-        //         element.style.visibility = 'hidden';
-        //     }
-
-        //     else{
-
-        //         element.style.visibility = 'visible';
-
-        //     }
-
-        // }
-
-        // function showDeleteTeacher(){
-
-        //     element = document.querySelector('.deleteTeacherPhp');
-        //     if(element.style.visibility == 'visible'){
-        //         element.style.visibility = 'hidden';
-        //     }
-
-        //     else{
-        //         element.style.visibility = 'visible';
-        //     }
-
-        // }
-
-       
-
-    </script>
-
-
+    <div class="addForm">
+        <h2 class="dTest">ADD Teacher</h2>
+        <form method="POST" action="addteacher.php">
+            Name : <input type="text" id="name" name="name"><br><br>
+            Email : <input type="text" id="email" name="email"><br><br>
+            Mobile No. : <input type="text" id="mobile" name="mobile"><br><br>
+            Password : <input type="text" id="password" name="password"><br><br>
+            Conform-Password : <input type="text" id="confirm-password" name="confirm-password"><br><br>
+            <div class="btn"> <button type="submit" name="submit">ADD Teacher</button> </div>
+        </form>
+    </div>
 
 </body>
-
-
 
 </html>
