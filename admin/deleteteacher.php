@@ -10,30 +10,37 @@
 //     die();
 // }
 
-$msg="";
-if (isset($_REQUEST['email'])) {
-
+$tid = $_GET['tid'];
     include '../config.php';
-    
-    
-    $email = $_REQUEST['email'];
-    
-    $result = mysqli_query($conn, "DELETE FROM teacher WHERE t_email='{$email}'");
-    
+    $result = mysqli_query($conn, "DELETE FROM teacher WHERE t_id='{$tid}'");
+
     if ($result) {
-        $msg =  "$email Successfully Deleted";     
-    } 
-    else 
-    {
-        $msg =  "*Error: $result";
+        header("location:admin.php");
     }
-}
-else{
-    $msg =  "*Error";
-}
+    else
+    {
+        echo "<script>alert('Can't delete Teacher!')</script>";
+    }
+    mysqli_close($conn);
 
 
-header("location:admin.php");
+// $msg="";
+// if (isset($_REQUEST['email'])) {
+//     include '../config.php'; 
+//     $email = $_REQUEST['email']; 
+//     $result = mysqli_query($conn, "DELETE FROM teacher WHERE t_email='{$email}'");
+//     if ($result) {
+//         $msg =  "$email Successfully Deleted";     
+//     } 
+//     else 
+//     {
+//         $msg =  "*Error: $result";
+//     }
+// }
+// else{
+//     $msg =  "*Error";
+// }
+// header("location:admin.php");
 ?>
 
 </head>
