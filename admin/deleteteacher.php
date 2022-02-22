@@ -13,7 +13,7 @@ $tid = $_GET['tid'];
     }
     else
     {
-        echo "<script>alert('Can't delete Teacher!')</script>";
+        echo "<script>alert('Can't delete Teacher!!!')</script>";
     }
     mysqli_close($conn);
 

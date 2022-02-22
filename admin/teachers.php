@@ -1,5 +1,6 @@
 <html>
 <head>
+<title>Admin/Teachers</title>
 <link rel="stylesheet" href="adminCss.css">
 <?php
     include('sideMenu.php');
@@ -12,9 +13,6 @@
 
             include '../config.php';
 
-            $tName="";
-            $tEmail="";
-            $tMobile="";
             $result = mysqli_query($conn, "SELECT t_id, t_name, t_email,t_mob FROM teacher");
             if (mysqli_num_rows($result) > 0) {
                 echo "<div class='myTable'><table><tr><th>ID</th><th>Name</th><th>Email</th><th>Mobile</th></tr>";

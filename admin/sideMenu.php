@@ -13,16 +13,17 @@
 
     <ul>
         <li><div class="logo">Exam <sub><div id="myDIV">B</div></sub>uddy<div></li>
+        <li><a href="adminDashboard.php">DashBoard</a></li>
         <div id="menuHeading">Teachers:</div>
-        <li><a href="teachers.php">Teachers</a></li>
+        <li><a href="teachers.php">Show/Delete Teachers</a></li>
         <li><a href="addteacher.php">ADD Teacher</a></li>
         <div id="menuHeading">Students:</div>
-        <li><a href="">Show Students</a></li>
+        <li><a href="students.php">Show/Delete Students</a></li>
         <li><a href="">ADD Student</a></li>
         <div id="menuHeading">Video:</div>
-        <li><a href="">Show Students</a></li>
-        <li><a href="">ADD Students</a></li>
-        <li><a href="">Delete Student</a></li>
+        <li><a href="">Show Videos</a></li>
+        <li><a href="">ADD Video</a></li>
+        <li><a href="">Delete Video</a></li>
     </ul>
 
     <!-- <div id="DIVID"> -->

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Admin Panel</title>
+<title>Admin/ADDTeacher</title>
 <link rel="stylesheet" href="adminCss.css">
 <?php
 
