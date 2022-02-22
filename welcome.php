@@ -15,4 +15,3 @@
         echo "Welcome " . $row['name'] . " <a href='logout.php'>Logout</a>";
     }
 ?>
-<!-- llllllllllllll -->
