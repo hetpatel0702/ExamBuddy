@@ -31,7 +31,7 @@
         } else {
             if ($password === $confirm_password) {
                 $sql = "INSERT INTO users (name, email, password, code) VALUES ('{$name}', '{$email}', '{$password}', '{$code}')";
-                $result = mysqli_query($conn, $sql);
+                $result = mysqli_query($conn, $sql);    
 
                 if ($result) {
                     echo "<div style='display: none;'>";
