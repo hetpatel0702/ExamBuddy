@@ -13,6 +13,7 @@
     
     <?php
         include('sideMenu.php');
+        header("location: adminDashboard.php");
     ?>
 
 </body>

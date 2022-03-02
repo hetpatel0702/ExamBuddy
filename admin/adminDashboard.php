@@ -11,8 +11,10 @@ body{
 <?php
     include('sideMenu.php');
 ?>
+
+<div> ADMIN Dashboard</div>
 </head>
 <body>
-
+    
 </body>
 </html>

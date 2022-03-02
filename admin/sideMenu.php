@@ -21,8 +21,9 @@
         <li><a href="students.php">Show/Delete Students</a></li>
         <li><a href="">ADD Student</a></li>
         <div id="menuHeading">Video:</div>
-        <li><a href="">Show Videos</a></li>
-        <li><a href="">ADD Video</a></li>
+        <!-- <li><a href="showVideos.php">Show Videos</a></li> -->
+        <li><a href="openVideos.php">Open Videos</a></li>
+        <li><a href="addVideos.php">ADD Video</a></li>
         <li><a href="">Delete Video</a></li>
     </ul>
 

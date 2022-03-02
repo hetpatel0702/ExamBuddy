@@ -130,11 +130,11 @@ div.addForm {
     margin-right: auto;
     padding: 0;
 }
-input{
+input, select{
     width: 80%;
     height: 35px;
 }
-input::placeholder {
+input::placeholder{
     color: gray;
     font-size: small;
     letter-spacing: 2px;

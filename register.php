@@ -56,7 +56,7 @@
                         //Content
                         $mail->isHTML(true);                                  //Set email format to HTML
                         $mail->Subject = 'Verification from EXAMBUDDY';
-                        $mail->Body    = 'Here is the verification link <b><a href="http://localhost/educational/login/?verification='.$code.'">http://localhost/educational/login/?verification='.$code.'</a></b>';
+                        $mail->Body    = 'Here is the verification link <b><a href="http://localhost/ExamBuddy/?verification='.$code.'">http://localhost/educational/login/?verification='.$code.'</a></b>';
 
                         $mail->send();
                         echo 'Message has been sent';
