@@ -28,7 +28,8 @@ ul {
     margin: 0;
     padding: 0;
     width: 20%;
-    background-color: darkcyan;
+    background-color: thistle;  
+    /* darkcyan; */
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -38,9 +39,10 @@ li a {
     display: block;
     color: white;
     letter-spacing: 2px;
+    border-radius: 8px;
     font-family: monospace, serif;
     font-size: 1.2vw;
-    margin: 5px 0 5px;
+    margin: 5px 2px 5px;
     background-color: coral;
     padding: 8px 16px;
     text-decoration: none;
@@ -144,7 +146,7 @@ input::placeholder{
   }
 
   #menuHeading{
-      color: white;
+      color: black;
       height: 20px;
       font-size: 1.2vw;
       text-align: left;

@@ -35,7 +35,7 @@
     color: black;
     font-size: 18px;
   }
-  a:hover{
+  a.myVideo:hover{
     text-decoration: underline;
     color: blue;
     font-size: 18px;
@@ -80,7 +80,7 @@
           if (mysqli_num_rows($result) > 0) {
             echo "<div>";
             while($row = $result->fetch_assoc()) {  
-                echo "<div id='linkName'><a onclick='fetch_video(".$row["id"].")'>($index) ".$row["name"]."</a></div>";
+                echo "<div id='linkName'><a class='myVideo' onclick='fetch_video(".$row["id"].")'>($index) ".$row["name"]."</a></div>";
                 // echo "<div id='linkName'>($index)  <a href='showVideos.php?id=".$row["id"]."'>".$row["name"]."</a></div>";
                 $index++;
             }

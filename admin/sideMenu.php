@@ -25,6 +25,9 @@
         <li><a href="openVideos.php">Open Videos</a></li>
         <li><a href="addVideos.php">ADD Video</a></li>
         <li><a href="">Delete Video</a></li>
+        <div id="menuHeading">Pdf:</div>
+        <li><a href="uploadPdf.php">Upload Pdf</a></li>
+        <li><a href="downloadPdf.php">Delete/Download Pdf</a></li>
     </ul>
 
     <!-- <div id="DIVID"> -->

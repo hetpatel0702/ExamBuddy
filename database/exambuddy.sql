@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2022 at 05:41 AM
+-- Generation Time: Mar 29, 2022 at 07:52 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -98,10 +98,8 @@ CREATE TABLE `files` (
 --
 
 INSERT INTO `files` (`id`, `name`, `size`, `downloads`) VALUES
-(5, 'CPU_Scheduling_Algorithms__II_no_anno.pdf', 2348658, 0),
-(6, 'Study Tracker.pdf', 451235, 1),
-(7, 'K116X97Question_Paper.pdf', 2193058, 1),
-(8, 'K116X97Question_Paper.pdf', 2193058, 4);
+(16, 'AI.pdf', 3651913, 0),
+(17, 'AML.pdf', 3397819, 0);
 
 -- --------------------------------------------------------
 
@@ -151,10 +149,8 @@ INSERT INTO `teacher` (`t_id`, `t_name`, `t_email`, `t_mob`, `t_pass`) VALUES
 (8, 'Dipam Patel', 'dipam@gmail.com', 2147483647, '81dc9bdb52d04dc20036dbd8313ed055'),
 (20, 'het', 'het@gmail.com', 2147483647, '81dc9bdb52d04dc20036dbd8313ed055'),
 (23, 'anand', 'ad@gmail.com', 2147483647, '81dc9bdb52d04dc20036dbd8313ed055'),
-(27, 'ac', 'acd@gmail.com', 4444, '81dc9bdb52d04dc20036dbd8313ed055'),
-(34, 'as', 'ads@gmail.com', 2147483647, '81dc9bdb52d04dc20036dbd8313ed055'),
-(35, 'add', 'abaa@gmail.com', 2147483647, '202cb962ac59075b964b07152d234b70'),
-(43, 'nij', 'nij@gmail.com', 2147483647, '81dc9bdb52d04dc20036dbd8313ed055');
+(43, 'nij', 'nij@gmail.com', 2147483647, '81dc9bdb52d04dc20036dbd8313ed055'),
+(44, 'Vadukul', 'vadu@gmail.com', 2147483647, '94e62763ca2c358fbe1de47b4a3c6962');
 
 -- --------------------------------------------------------
 
@@ -175,8 +171,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `code`) VALUES
-(1, 'dipam', 'pateldipam6653@gmail.com', 'd9b60aa4cdf32126420ef764e89e2b5c', ''),
-(2, 'Dipam Patel', 'dipampatel001@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '79946f48863adfc92e7d5779ca883170');
+(16, 'Dipam', 'dipampatel001@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '');
 
 -- --------------------------------------------------------
 
@@ -204,7 +199,9 @@ INSERT INTO `videos` (`id`, `name`, `link`, `c_id`) VALUES
 (13, 'Insertion and Deletion in Array ', '1Kic3maW7rc', 1),
 (14, 'Searching in Array', '1Kic3maW7rc', 1),
 (19, 'Linked List: Traversing and Insertion', '1Kic3maW7rc', 1),
-(40, 'Compiler Design intro', '/p1omkBPAcOg', 6);
+(40, 'Compiler Design intro', 'p1omkBPAcOg', 6),
+(41, 'Knapsack Algo', 'oTTzNMHM05I', 2),
+(42, '0/1 knapsack', '/PfkBS9qIMRE', 2);
 
 --
 -- Indexes for dumped tables
@@ -272,7 +269,7 @@ ALTER TABLE `exam`
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `quiz`
@@ -284,19 +281,19 @@ ALTER TABLE `quiz`
 -- AUTO_INCREMENT for table `teacher`
 --
 ALTER TABLE `teacher`
-  MODIFY `t_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `t_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
