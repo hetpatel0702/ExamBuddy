@@ -85,7 +85,6 @@
                     </div>
                     <div class="content-wthree">
                         <h2>Login Now</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                         <?php echo $msg; ?>
                         <form action="" method="post">
                             <input type="email" class="email" name="email" placeholder="Enter Your Email" required>

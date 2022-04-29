@@ -14,20 +14,9 @@
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo">ExamBuddy</div>
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <ul>
-            <li><a href="#">Browse</a></li>
-            <li><a href="#">Landing</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Accounts</a></li>
-            <li><a href="logout.php">Logout</a></li>
-        </ul>
-    </nav>
+    <?php 
+    include './header.php' ;
+    ?>
     <div class="nav">
         <span class="span1">Welcome To ExamBuddy</span>
         <div class="text">one Stop solution to all your competitve exams, Get an Competitive advantage over your peers
@@ -125,43 +114,6 @@
             </div>
         </div>
     </div>
-    <div class="card">
-        <img src="javascript.jpg" alt="" >
-        <div class="container1">
-            <h4><b>Introduction To JavaScript and using the Console</b></h4>
-            <div class="time">
-                <i class="far fa-light fa-clock iconCard"> </i>
-                <span>10h 30m</span>
-                <i class="fas fa-signal iconCard1"> </i>
-                <span>Intermediate</span>
-            </div>
-            <div class="stars">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star-half" ></i>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <img src="javascript.jpg" alt="" >
-        <div class="container1">
-            <h4><b>Introduction To JavaScript and using the Console</b></h4>
-            <div class="time">
-                <i class="far fa-light fa-clock iconCard"> </i>
-                <span>10h 30m</span>
-                <i class="fas fa-signal iconCard1"> </i>
-                <span>Intermediate</span>
-            </div>
-            <div class="stars">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star-half" ></i>
-            </div>
-        </div>
     </div>
     
     

@@ -115,7 +115,6 @@
                     </div>
                     <div class="content-wthree">
                         <h2>Register Now</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                         <?php echo $msg; ?>
                         <form action="" method="post">
                             <input type="text" class="name" name="name" placeholder="Enter Your Name" value="<?php if (isset($_POST['submit'])) { echo $name; } ?>" required>

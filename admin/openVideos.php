@@ -54,7 +54,7 @@
 
     <label for="exam">Choose a Exam:</label>
     <?php
-    echo $_SERVER['REQUEST_URI'];
+    // echo $_SERVER['REQUEST_URI'];
         include '../config.php';
         $result = mysqli_query($conn, "SELECT * FROM exam ORDER BY e_id");
         if (mysqli_num_rows($result) > 0) {

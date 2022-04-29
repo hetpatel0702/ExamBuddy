@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>m
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css">
@@ -41,43 +41,69 @@
         }
     </style>
     <?php
-        if (isset($_POST['save'])) {
-            include '../config.php';
-            $sql = "SELECT * FROM files";
-            $result = mysqli_query($conn, $sql);
-          
-            $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-              // name of the uploaded file
-              $filename = $_FILES['myfile']['name'];
-          
-              // destination of the file on the server
-              $destination = '../uploads/' . $filename;
-          
-              // get the file extension
-              $extension = pathinfo($filename, PATHINFO_EXTENSION);
-          
-              // the physical file on a temporary uploads directory on the server
-              $file = $_FILES['myfile']['tmp_name'];
-              $size = $_FILES['myfile']['size'];
-          
-              if (!in_array($extension, ['zip', 'pdf', 'docx'])) {
-                echo "<script>alert('You file extension must be .zip, .pdf or .docx')</script>";
-              } elseif ($_FILES['myfile']['size'] > 10000000) { // file shouldn't be larger than 10Megabyte
-                  echo "<script>alert('File too large!!!')</script>";
-              } else {
-                  // move the uploaded (temporary) file to the specified destination
-                  if (move_uploaded_file($file, $destination)) {
-                      $sql = "INSERT INTO files (name, size, downloads) VALUES ('$filename', $size, 0)";
-                      if (mysqli_query($conn, $sql)) {
-                          echo "<script>alert('File uploaded successfully')</script>";
-                      }
-                  } else {
-                      echo "<script>alert('Failed to upload file!!!')</script>";
-                  }
-              }
-          }  
-    ?>
+     
+     require '../vendor/autoload.php';
+       
+         use Aws\S3\S3Client;
+         use Aws\S3\Exception\S3Exception;
+       
+         // AWS Info
+         if(isset($_POST['save']))
+         {
+         $bucketName = 'exambuddy28';
+         $IAM_KEY = 'AKIARZEIHB47WDPLNK7M';
+         $IAM_SECRET = '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';
+       
+         // Connect to AWS
+         try {
+           
+           $s3 = S3Client::factory(
+             array(
+               'credentials' => array(
+                 'key' => $IAM_KEY,
+                 'secret' => $IAM_SECRET
+               ),
+               'version' => 'latest',
+               'region'  => 'ap-south-1'
+             )
+           );
+         } catch (Exception $e) {
+           // We use a die, so if this fails. It stops here. Typically this is a REST call so this would
+           // return a json object.
+           die("Error: " . $e->getMessage());
+           echo "<script>alert('Error:' . $e->getMessage())</script>";
+         }
+       
+         
+         // For this, I would generate a unqiue random string for the key name. But you can do whatever.
+         $keyName = 'Uploads/' . basename($_FILES["myfile"]['name']);
+         $pathInS3 = 'https://s3.ap-south-1.amazonaws.com/' . $bucketName . '/' . $keyName;
+       
+         // Add it to S3
+         try {
+           // Uploaded:
+           $file = $_FILES["myfile"]['tmp_name'];
+       
+           $s3->putObject(
+             array(
+               'Bucket'=>$bucketName,
+               'Key' =>  $keyName,
+               'SourceFile' => $file,
+               'StorageClass' => 'REDUCED_REDUNDANCY'
+             )
+           );
+           echo "<script>alert('File uploaded successfully')</script>";
+         } catch (S3Exception $e) {
+           die('Error:' . $e->getMessage());
+           echo "<script>alert('Error:' . $e->getMessage())</script>";
+         } catch (Exception $e) {
+           die('Error:' . $e->getMessage());
+           echo "<script>alert('Error:' . $e->getMessage())</script>";
+         }
+       
+       }
+       
+     ?>
   </head>
 
   <body>

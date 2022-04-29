@@ -22,7 +22,7 @@ nav .logo{
     font-weight: 600;
 }
 .nav{
-    background-color: purple;
+    background-color: hsl(101deg 63% 34%);;
     color: #fff;
     height: 350px;
 }
@@ -77,7 +77,7 @@ nav ul li{
     margin: 0 5px;
 }
 
-nav ul li a{
+nav ul li a.head{
     color: black;
     text-decoration: none;
     font-size: 18px;
@@ -95,7 +95,7 @@ nav .menu-btn i{
 }
 
 
-nav ul li a:hover{
+nav ul li a.head:hover{
     color: #fff;
     background: black;
 }
@@ -242,11 +242,11 @@ nav ul li a:hover{
         display: block;
     }
 
-    nav ul li a{
+    nav ul li a.head{
         font-size: 20px;
         /* display: block; */
     }
-    nav ul li a:hover{
+    nav ul li a.head:hover{
         color:#fff;
         background: black;
     }
