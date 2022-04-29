@@ -9,7 +9,7 @@
 
     session_start();
     if (isset($_SESSION['SESSION_EMAIL'])) {
-        header("Location: welcome.php");
+        header("Location: homepage.php");
         die();
     }
 
@@ -44,19 +44,19 @@
                         $mail->isSMTP();                                            //Send using SMTP
                         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
                         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                        $mail->Username   = '180110116028@gcet.ac.in';                     //SMTP username
-                        $mail->Password   = 'nij125909';                               //SMTP password
+                        $mail->Username   = 'ebuddy338@gmail.com';                     //SMTP username
+                        $mail->Password   = 'sem8project';                               //SMTP password
                         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                         //Recipients
-                        $mail->setFrom('180110116028@gcet.ac.in');
+                        $mail->setFrom('ebuddy338@gmail.com');
                         $mail->addAddress($email);
 
                         //Content
                         $mail->isHTML(true);                                  //Set email format to HTML
                         $mail->Subject = 'Verification from EXAMBUDDY';
-                        $mail->Body    = 'Here is the verification link <b><a href="http://localhost/educational/login/?verification='.$code.'">http://localhost/educational/login/?verification='.$code.'</a></b>';
+                        $mail->Body    = 'Here is the verification link <b><a href="http://localhost/ExamBuddy/login.php?verification='.$code.'">http://localhost/ExamBuddy/login.php?verification='.$code.'</a></b>';
 
                         $mail->send();
                         echo 'Message has been sent';
@@ -98,7 +98,7 @@
 </head>
 
 <body>
-
+    
     <!-- form section start -->
     <section class="w3l-mockup-form">
         <div class="container">
@@ -115,7 +115,6 @@
                     </div>
                     <div class="content-wthree">
                         <h2>Register Now</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                         <?php echo $msg; ?>
                         <form action="" method="post">
                             <input type="text" class="name" name="name" placeholder="Enter Your Name" value="<?php if (isset($_POST['submit'])) { echo $name; } ?>" required>
@@ -125,7 +124,7 @@
                             <button name="submit" class="btn" type="submit">Register</button>
                         </form>
                         <div class="social-icons">
-                            <p>Have an account! <a href="index.php">Login</a>.</p>
+                            <p>Have an account! <a href="login.php">Login</a>.</p>
                         </div>
                     </div>
                 </div>

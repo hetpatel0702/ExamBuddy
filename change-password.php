@@ -15,7 +15,7 @@ if (isset($_GET['reset'])) {
 
                 if ($query) {
                     
-                    header("Location: index.php");
+                    header("Location: login.php");
                 }
             } else {
                 $msg = "<div class='alert alert-danger'>Password and Confirm Password do not match.</div>";
@@ -78,7 +78,7 @@ if (isset($_GET['reset'])) {
                             <button name="submit" class="btn" type="submit">Change Password</button>
                         </form>
                         <div class="social-icons">
-                            <p>Back to! <a href="index.php">Login</a>.</p>
+                            <p>Back to! <a href="login.php">Login</a>.</p>
                         </div>
                     </div>
                 </div>
