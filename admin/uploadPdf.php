@@ -50,9 +50,9 @@
          // AWS Info
          if(isset($_POST['save']))
          {
-         $bucketName = 'exambuddy28';
-         $IAM_KEY = 'AKIARZEIHB47WDPLNK7M';
-         $IAM_SECRET = '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';
+         $bucketName = '';
+         $IAM_KEY = '';
+         $IAM_SECRET = '';
        
          // Connect to AWS
          try {
