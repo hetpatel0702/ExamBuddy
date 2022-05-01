@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,14 +59,14 @@
 <br><br>
 <div class="courses">
     <div class="card">
-        <img src="javascript.jpg" alt="" >
+        <a href="stShowVideos.php?cid=1"><img src="images/datastructure.png" alt="Data Structure"></a>
         <div class="container1">
-            <h4><b>Introduction To JavaScript and using the Console</b></h4>
+            <h4><b>Introduction To Data structures</b></h4>
             <div class="time">
                 <i class="far fa-light fa-clock iconCard"> </i>
                 <span>10h 30m</span>
                 <i class="fas fa-signal iconCard1"> </i>
-                <span>Intermediate</span>
+                <span>Beginners</span>
             </div>
             <div class="stars">
                 <i class="fas fa-star" aria-hidden="true"></i>
@@ -73,18 +74,24 @@
                 <i class="fas fa-star" aria-hidden="true"></i>
                 <i class="fas fa-star" aria-hidden="true"></i>
                 <i class="fas fa-star-half" ></i>
+            </div>
+            <div>
+            Data Structure can be defined as the group of data elements which provides an efficient way of storing...
+            </div>
+            <div>
+                <b>Educator: Anand Patel</b>
             </div>
         </div>
     </div>
     <div class="card">
-        <img src="javascript.jpg" alt="" >
+        <img src="images/DBMS.png" alt="" >
         <div class="container1">
-            <h4><b>Introduction To JavaScript and using the Console</b></h4>
+            <h4><b>Introduction To DBMS</b></h4>
             <div class="time">
                 <i class="far fa-light fa-clock iconCard"> </i>
-                <span>10h 30m</span>
+                <span>12h 30m</span>
                 <i class="fas fa-signal iconCard1"> </i>
-                <span>Intermediate</span>
+                <span>Beginners</span>
             </div>
             <div class="stars">
                 <i class="fas fa-star" aria-hidden="true"></i>
@@ -92,18 +99,21 @@
                 <i class="fas fa-star" aria-hidden="true"></i>
                 <i class="fas fa-star" aria-hidden="true"></i>
                 <i class="fas fa-star-half" ></i>
+            </div>
+            <div>
+                Educator: Nij Padariya
             </div>
         </div>
     </div>
     <div class="card">
-        <img src="javascript.jpg" alt="" >
+        <img src="images/maths.png" alt="" >
         <div class="container1">
-            <h4><b>Introduction To JavaScript and using the Console</b></h4>
+            <h4><b>Mathematics</b></h4>
             <div class="time">
                 <i class="far fa-light fa-clock iconCard"> </i>
-                <span>10h 30m</span>
+                <span>8h 30m</span>
                 <i class="fas fa-signal iconCard1"> </i>
-                <span>Intermediate</span>
+                <span>Advanced</span>
             </div>
             <div class="stars">
                 <i class="fas fa-star" aria-hidden="true"></i>
@@ -112,11 +122,12 @@
                 <i class="fas fa-star" aria-hidden="true"></i>
                 <i class="fas fa-star-half" ></i>
             </div>
+            <div>
+                Educator: Het Patel
+            </div>
         </div>
     </div>
     </div>
-    
-    
     
 </div>
     

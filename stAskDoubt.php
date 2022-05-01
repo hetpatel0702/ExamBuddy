@@ -103,6 +103,9 @@
 
     <?php 
       include './header.php' ;
+      if (!isset($_SESSION['SESSION_EMAIL'])) {
+        header("Location: login.php");
+    }
     ?>
 
     <div id="askDoubt">

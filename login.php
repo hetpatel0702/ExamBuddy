@@ -1,10 +1,13 @@
 <!--  Code by Brave Coder - https://youtube.com/BraveCoder -->
-<!-- Hiiii-->
 
 <?php
     session_start();
     if (isset($_SESSION['SESSION_EMAIL'])) {
-        header("Location: homepage.php");
+        if($_SESSION['uid'] == 1)
+            header("Location: admin/admin.php");
+        else
+            header("Location: homepage.php");
+
         die();
     }
 
@@ -34,8 +37,14 @@
             $row = mysqli_fetch_assoc($result);
 
             if (empty($row['code'])) {
+                $_SESSION['type'] = 1;
                 $_SESSION['SESSION_EMAIL'] = $email;
-                header("Location: homepage.php");
+                $_SESSION['uid'] = $row['id'];
+                if($_SESSION['uid'] == 1)
+                    header("Location: admin/admin.php");
+                else
+                    header("Location: homepage.php");
+
             } else {
                 $msg = "<div class='alert alert-info'>First verify your account and try again.</div>";
             }
@@ -93,7 +102,7 @@
                             <button name="submit" name="submit" class="btn" type="submit">Login</button>
                         </form>
                         <div class="social-icons" style="margin-bottom:5px;">
-                            <p>Admin Login <a href="admin/admin.php">AdminLogin</a>.</p>
+                            <p>Teacher Login <a href="teacherLogin.php">TeacherLogin</a>.</p>
                         </div>
                         <div class="social-icons">
                             <p>Create Account! <a href="register.php">Register</a>.</p>
