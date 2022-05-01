@@ -19,7 +19,7 @@
         <li><a href="addteacher.php">ADD Teacher</a></li>
         <div id="menuHeading">Students:</div>
         <li><a href="students.php">Show/Delete Students</a></li>
-        <li><a href="">ADD Student</a></li>
+        <!-- <li><a href="">ADD Student</a></li> -->
         <div id="menuHeading">Video:</div>
         <!-- <li><a href="showVideos.php">Show Videos</a></li> -->
         <li><a href="openVideos.php">Open Videos</a></li>
@@ -28,6 +28,8 @@
         <div id="menuHeading">Pdf:</div>
         <li><a href="uploadPdf.php">Upload Pdf</a></li>
         <li><a href="downloadPdf.php">Delete/Download Pdf</a></li>
+        <div id="menuHeading">Logout:</div>
+        <li><a href="adminLogout.php">Logout</a></li>
     </ul>
 
     <!-- <div id="DIVID"> -->

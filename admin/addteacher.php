@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conn, "SELECT * FROM teacher WHERE t_email='{$email}'");
 
     if (mysqli_num_rows($result) > 0) {
-        echo '<script>alert("{$email} - This email address has been already exists!!!")</script>';
+        echo "<script>alert('$email - This email address has been already exists!!!')</script>";
         
     } else {
         if ($password === $confirm_password) {
@@ -48,9 +48,9 @@ if (isset($_POST['submit'])) {
             <form method="POST" action= <?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>>
                 <div id="myInput"><input type="text" id="name" name="name" placeholder="Name"></div><br>
                 <div id="myInput"><input type="text" id="temail" name="email" placeholder="Email"></div><br>
-                <div id="myInput"><input type="text" id="mobile" name="mobile" placeholder="Mobile"></div><br>
-                <div id="myInput"><input type="text" id="password" name="password" placeholder="Password"></div><br>
-                <div id="myInput"><input type="text" id="confirm-password" name="confirm-password" placeholder="Confirm-Password"></div><br>
+                <div id="myInput"><input type="number" id="mobile" name="mobile" placeholder="Mobile"></div><br>
+                <div id="myInput"><input type="password" id="password" name="password" placeholder="Password"></div><br>
+                <div id="myInput"><input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm-Password"></div><br>
                 <div class="btn"><button type="submit" id="addBtn"  name="submit">ADD Teacher</button> </div>
             </form>
         </div>
